@@ -30,7 +30,11 @@ body {
    margin: 0 auto;
    padding: 0 15px;
 }
-
+.container-flued {
+   min-width: 1920px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
 .open {
    transform: translateX(0);
 }
