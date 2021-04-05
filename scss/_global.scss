@@ -11,6 +11,15 @@ body {
    color: $default;
    overflow-x: hidden;
 }
+.visually-hidden {
+   position: absolute;
+   clip: rect(0000);
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   font-size: 0;
+   line-height: 0;
+}
 .wrapper {
    display: flex;
    flex-direction: column;

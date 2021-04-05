@@ -10,7 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
    rightsideMenuClose.addEventListener('click', () => {
       rightsideMenu.classList.remove('open');
    });
+
+
+   //mixitup
+
+   let mixer = mixitup('.gallery__inner', {
+      load: {
+         filter: '.living'
+      }
+   });
+
+
 });
+
+
+//slick-slider
 $(function () {
    $('.top__slider').slick({
       arrows: false,
