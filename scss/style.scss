@@ -25,6 +25,20 @@
       @extend %title-font;
       line-height: 22px;
       color: rgba(54, 56, 56, 0.9);
+      &--active {
+         padding-bottom: 4px;
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 1px;
+            background-color: rgba($title, 0.7);
+         }
+      }
    }
 }
 .logo {
@@ -169,6 +183,25 @@
    }
    &__img {
       max-width: 485px;
+   }
+}
+
+.breadcrumbs {
+   padding: 13px 14px;
+   background: rgba(#dfdfdf, 0.5);
+   &__list {
+      display: flex;
+   }
+   &__item::after {
+      content: "/";
+      margin: 0 4px 0 -4px;
+   }
+   &__item:last-child::after {
+      display: none;
+   }
+   &__link {
+      font-size: 14px;
+      color: $default;
    }
 }
 
@@ -488,5 +521,57 @@
       font-weight: 600;
       font-size: 14px;
       color: #707070;
+   }
+}
+
+.about {
+   &__intro {
+      margin-top: -53px;
+      padding: 160px 0;
+      text-align: center;
+      background: url(../images/about/about-bg.jpg) no-repeat top center / cover;
+      &-title {
+         font-weight: bold;
+         font-size: 60px;
+         line-height: 80px;
+         @extend %title-font;
+         color: $title;
+      }
+   }
+   &__content {
+      padding: 130px 0 40px;
+   }
+   &__title {
+      position: relative;
+      max-width: 822px;
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      color: $title;
+      @extend %title-font;
+      font-size: 36px;
+      line-height: 60px;
+      font-weight: 600;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 200px;
+         height: 2px;
+         bottom: 0;
+         left: 0;
+         background: #6d7278;
+      }
+   }
+   &__text {
+      padding-left: 285px;
+      p {
+         margin-bottom: 30px;
+      }
+   }
+   &__popup {
+      padding: 167px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(../images/about/popup-bg.jpg) no-repeat top center / cover;
    }
 }
