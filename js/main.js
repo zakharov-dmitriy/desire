@@ -34,3 +34,12 @@ $(function () {
 
    });
 });
+
+$(function () {
+   $('.contact__slider').slick({
+      arrows: false,
+      dots: true,
+      slidesToShow: 10,
+      slidesToScroll: 10,
+   });
+});
