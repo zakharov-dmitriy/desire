@@ -43,3 +43,11 @@ $(function () {
       slidesToScroll: 10,
    });
 });
+
+$(function () {
+   $('.article-slider__box').slick({
+      prevArrow: '<button type="button" class="slick-prev article-slider__arrow article-slider__arrow-prev"><img src="images/blog/slider-prev.svg" alt="arrow-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next article-slider__arrow article-slider__arrow-next"><img src="images/blog/slider-next.svg" alt="arrow-next"></button>'
+
+   });
+});

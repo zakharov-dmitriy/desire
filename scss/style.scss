@@ -135,7 +135,7 @@
    right: 0;
    top: 0;
    bottom: 0;
-   z-index: 5;
+   z-index: 10;
    max-width: 694px;
    width: 100%;
    padding-top: 40px;
@@ -188,7 +188,7 @@
 
 .breadcrumbs {
    position: relative;
-   z-index: 999;
+   z-index: 5;
    padding: 13px 14px;
    background: rgba(#dfdfdf, 0.5);
    &__list {
@@ -783,6 +783,193 @@
          &:hover {
             opacity: 1;
          }
+      }
+   }
+}
+.blog {
+   padding: 60px 0 100px;
+   &__inner {
+      display: flex;
+   }
+   &__category {
+      margin-bottom: 36px;
+      &-title {
+         margin-bottom: 16px;
+         color: $title;
+         @extend %title-font;
+         line-height: 23px;
+      }
+      &-item {
+         margin-bottom: 12px;
+      }
+   }
+   .recent-posts {
+      margin-bottom: 40px;
+      &__title {
+         margin-bottom: 24px;
+         color: $title;
+         @extend %title-font;
+         line-height: 23px;
+      }
+      &__item {
+         margin-bottom: 11px;
+      }
+      &__date,
+      &__author {
+         color: #a1a1a1;
+         font-size: 14px;
+      }
+   }
+   &__tags {
+      margin-top: 40px;
+      margin-bottom: 50px;
+      &-title {
+         margin-bottom: 16px;
+         color: $title;
+         @extend %title-font;
+         line-height: 23px;
+      }
+      &-link {
+         padding: 0 16px;
+         margin-bottom: 10px;
+         margin-right: 10px;
+         font-weight: 600;
+         font-size: 14px;
+         color: #8f8d8d;
+         border: 1px solid rgba(69, 70, 71, 0.5);
+         border-radius: 14px;
+      }
+   }
+   &__social {
+      display: flex;
+      align-items: center;
+      &-item {
+         margin-right: 20px;
+      }
+   }
+   &__items {
+      max-width: 730px;
+   }
+   &__item {
+      margin-bottom: 80px;
+      &-popup {
+         position: absolute;
+         z-index: 1;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      &-info {
+         margin-bottom: 10px;
+         margin-top: 25px;
+         font-weight: 600;
+         font-size: 14px;
+         color: #707070;
+      }
+      &-title {
+         margin-bottom: 6px;
+         font-weight: bold;
+         font-size: 24px;
+         line-height: 38px;
+         color: $title;
+      }
+   }
+   &__blockquote {
+      position: relative;
+      padding: 54px 64px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 38px;
+      background: rgba(223, 223, 223, 0.5);
+      &::after {
+         content: "";
+         position: absolute;
+         width: 200px;
+         height: 1px;
+         top: 160px;
+         right: 0;
+         left: 0;
+         margin: 0 auto;
+         background: #6d7278;
+         border-radius: 0.5px;
+      }
+      &-author {
+         margin-top: 47px;
+         font-size: 16px;
+         line-height: 22px;
+         font-style: normal;
+         @extend %title-font;
+         color: rgba(55, 57, 57, 0.903);
+      }
+   }
+   .article-popup {
+      &__box {
+         position: relative;
+      }
+   }
+   .article-slider__arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      transform: translateY(-50%);
+      &-prev {
+         left: 16px;
+      }
+      &-next {
+         right: 16px;
+      }
+   }
+   .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__list {
+         display: flex;
+      }
+      &__item {
+         margin: 0 6px;
+      }
+      &__arrow {
+         margin: 0 6px;
+         &--disabled {
+            display: none;
+         }
+      }
+      &__num {
+         font-weight: 600;
+         font-size: 14px;
+         color: #707070;
+         &--active {
+            color: $title;
+         }
+      }
+   }
+}
+.aside {
+   width: 350px;
+   margin-left: 30px;
+   &__form {
+      position: relative;
+      margin-bottom: 40px;
+      &-search {
+         width: 100%;
+         padding: 6px 48px 6px 18px;
+         font-size: 14px;
+         border: 1px solid rgba($title, 0.7);
+         border-radius: 20px;
+         &::placeholder {
+            color: #a1a1a1;
+         }
+      }
+      &-btn {
+         position: absolute;
+         top: 50%;
+         right: 19px;
+         z-index: 1;
+         transform: translateY(-50%);
       }
    }
 }
